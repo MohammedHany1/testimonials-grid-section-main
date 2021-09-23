@@ -1,0 +1,213 @@
+@import url(https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap);
+
+:root{
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+    --barlow-font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+}
+
+body{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    font-family: var(--barlow-font-family);
+    background-color: var(--Light-grayish-blue);
+}
+
+article{
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    border-radius: 8px;
+    padding: 30px 30px 35px;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px
+}
+
+article .graduate{
+    width: 100%;
+    display: flex;
+    gap: 15px
+} 
+
+article .graduate img{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    border: 2px solid hsl(0 0% 100% / 50%);
+    box-sizing: border-box;
+}
+
+article .graduate .info{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 13px;
+}
+
+article .graduate .info .name{
+    width: 100%;
+    color: var(--White);
+}
+
+article .graduate .info .state{
+    width: 100%;
+    color: hsl(0 0% 100% / 50%);
+}
+
+article > h4{
+    font-weight: 500;
+    width: 79%;
+}
+
+article > p{
+    color: hsl(0 0% 100% / 70%);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+article:nth-of-type(1){
+    background: url(../images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 90% 0%;
+    background-color: var(--Moderate-violet);
+}
+
+article:nth-of-type(2){
+    background-color: var(--Very-dark-grayish-blue);
+}
+
+article:nth-of-type(3),
+article:nth-of-type(5){
+    background-color: white;
+    color: var(--Very-dark-blackish-blue);
+}
+
+article:nth-of-type(3) .graduate .info .name,
+article:nth-of-type(5) .graduate .info .name{
+    color: var(--Very-dark-blackish-blue);
+}
+
+article:nth-of-type(3) .graduate .info .state,
+article:nth-of-type(5) .graduate .info .state{
+    color: hsl(219 29% 14% / 50%);
+}
+
+article:nth-of-type(3) > h4,
+article:nth-of-type(5) > h4{
+    color: var(--Very-dark-blackish-blue);
+}
+
+article:nth-of-type(3) > p,
+article:nth-of-type(5) > p{
+    color: hsl(219 29% 14% / 70%);
+}
+
+article:nth-of-type(4){
+    background-color: var(--Very-dark-blackish-blue);
+}
+
+article:nth-of-type(4) .graduate img{
+    border: 2px solid hsl(263 55% 52% / 50%);
+}
+
+.attribution{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.attribution a{
+    text-decoration: none;
+    color: var(--Moderate-violet);
+}
+
+@media (min-width: 1440px){
+    body{
+        display: grid;
+        grid-template-columns: .8fr 1fr 1.5fr 1fr 1fr .8fr;
+        grid-template-rows: .8fr 1.5fr 1fr .8fr;
+        grid-template-rows: repeat(4, auto);
+        gap: 20px;
+    }
+
+    article{
+        width: fit-content;
+        padding: 20px 15px 20px;
+        line-height: 1.4;
+    }
+
+    article:nth-of-type(1){
+        grid-area: 2 / 2 / 3 / 4;
+    }
+
+    article:nth-of-type(2){
+        grid-area: 2 / 4 / 3 / 5;
+    }
+
+    article:nth-of-type(3){
+        grid-area: 3 / 2 / 4 / 3;
+    }
+
+    article:nth-of-type(4){
+        grid-area: 3 / 3 / 4 / 5;
+    }
+
+    article:nth-of-type(5){
+        grid-area: 2 / 5 / 4 / 6;
+    }
+
+    .attribution{
+        grid-area: 4 / 2 / 5 / 6;
+    }
+
+    article > .graduate{
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    article > h4{
+        font-size: 22px;
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.2;
+    }
+
+    article:nth-of-type(3){
+        box-shadow: 5px 5px 19px #00000026;
+    }
+
+    article:nth-of-type(5){
+        box-shadow: 5px 5px 19px #00000026;
+    }
+
+    article:nth-of-type(2) > h4{
+        font-size: 20px;
+        width: 100%;
+    }
+
+    article:nth-of-type(1) > p,
+    article:nth-of-type(4) > p{
+        width: 94%;
+        font-size: 14px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
